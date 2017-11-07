@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ContosoUniversity.Models;
+using System;
 using System.Collections.Generic;
 using System.Data.Entity;
 using System.Data.Entity.ModelConfiguration.Conventions;
@@ -7,10 +8,8 @@ using System.Web;
 
 namespace ContosoUniversity.DAL
 {
-    public class SchoolContext
+    public class SchoolContext : DbContext
     {
-        public class SchoolContext : DbContext
-        {
             //This is passing the connection string into the constructor
             public SchoolContext() : base("SchoolContext")
             {
@@ -30,4 +29,3 @@ namespace ContosoUniversity.DAL
             }
         }
     }
-}
